@@ -124,3 +124,10 @@ function objetosIguales(obj1, obj2) {
   if (k1.length !== k2.length) return false;
   return k1.every(k => obj2.hasOwnProperty(k) && obj1[k] === obj2[k]);
 }
+console.log('objetosIguales:', objetosIguales({ a: 1, b: 2 }, { a: 1, b: 2 })); // true
+// 9. Escribe una función que tome un objeto literal como argumento y devuelva una copia exacta de ese objeto.
+function copiarObjeto(obj) { return { ...obj }; }
+console.log('copiarObjeto:', copiarObjeto({ a: 1, b: 2 })); // { a: 1, b: 2 }
+// 10. Escribe una función que tome dos objetos literales como argumentos y devuelva un nuevo objeto con todas las propiedades de ambos objetos. Si hay propiedades con el mismo nombre, el valor del segundo objeto deberá prevalecer.
+function unirObjetos(obj1, obj2) { return { ...obj1, ...obj2 }; }
+console.log('unirObjetos:', unirObjetos({ a: 1, b: 2 }, { b: 3, c: 4 })); // { a: 1, b: 3, c: 4 }
